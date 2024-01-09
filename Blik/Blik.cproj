@@ -5,7 +5,7 @@
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.microchip.xc8</ToolchainName>
     <ProjectGuid>2285C48D-296E-43FD-A7B6-69885F64CFFD</ProjectGuid>
-    <avrdevice>ATtiny13A</avrdevice>
+    <avrdevice>ATtiny85</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
@@ -30,32 +30,29 @@
     <EraseKey />
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-        <options />
-        <configurations />
-        <files />
-        <documentation help="" />
-        <offline-documentation help="" />
-        <dependencies>
-          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
-        </dependencies>
-      </framework-data>
+  <options />
+  <configurations />
+  <files />
+  <documentation help="" />
+  <offline-documentation help="" />
+  <dependencies>
+    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.52.0" />
+  </dependencies>
+</framework-data>
     </AsfFrameworkConfig>
     <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
     <avrtoolserialnumber />
-    <avrdeviceexpectedsignature>0x1E9007</avrdeviceexpectedsignature>
+    <avrdeviceexpectedsignature>0x1E930B</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_simulator>
-      <ToolOptions>
+      <ToolOptions xmlns="">
         <InterfaceProperties>
         </InterfaceProperties>
-        <InterfaceName>
-        </InterfaceName>
       </ToolOptions>
-      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
-      <ToolNumber>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
       </ToolNumber>
-      <ToolName>Simulator</ToolName>
+      <ToolName xmlns="">Simulator</ToolName>
     </com_atmel_avrdbg_tool_simulator>
-    <avrtoolinterface />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
