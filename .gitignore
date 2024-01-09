@@ -1,9 +1,6 @@
 # Atmel studio files
 .vs
 
-#Debug files
-Blik/Debug
-
 # Prerequisites
 *.d
 
