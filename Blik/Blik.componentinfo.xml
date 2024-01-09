@@ -15,13 +15,13 @@
 			<Description></Description>
 			<Files xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATtiny_DFP\1.10.348\xc8\avr\include\avr\iotn13.h</AbsolutePath>
+					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATtiny_DFP\1.10.348\xc8\avr\include\avr\iotn12.h</AbsolutePath>
 					<Attribute></Attribute>
 					<Category>header</Category>
 					<Condition>XC</Condition>
-					<FileContentHash>9cCCUSJX1rLfiq/IGwuDUA==</FileContentHash>
+					<FileContentHash>LiRM5fzX4ciKRQOq+hkXWQ==</FileContentHash>
 					<FileVersion></FileVersion>
-					<Name>xc8/avr/include/avr/iotn13.h</Name>
+					<Name>xc8/avr/include/avr/iotn12.h</Name>
 					<SelectString></SelectString>
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
@@ -30,7 +30,7 @@
 			<PackPath>C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATtiny_DFP/1.10.348/Atmel.ATtiny_DFP.pdsc</PackPath>
 			<PackVersion>1.10.348</PackVersion>
 			<PresentInProject>true</PresentInProject>
-			<ReferenceConditionId>ATtiny13</ReferenceConditionId>
+			<ReferenceConditionId>ATtiny12</ReferenceConditionId>
 			<RteComponents xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 				<d4p1:string></d4p1:string>
 			</RteComponents>

@@ -6,7 +6,6 @@
  */ 
 
 #include <xc.h>
-
 #include <avr/interrupt.h>
 
 #define LEDPIN1 PB0
