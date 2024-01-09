@@ -2,7 +2,7 @@
 .vs
 
 #Debug files
-Debug/
+Blik/Debug
 
 # Prerequisites
 *.d
