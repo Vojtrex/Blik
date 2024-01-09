@@ -12,9 +12,12 @@ The ATtiny85 is a low-power 8-bit AVR microcontroller with 8KB of programmable f
 
 ### Components Used
 
-- **LEDPIN1 (PINB3):** First LED connected to PINB3.
-- **LEDPIN2 (PINB4):** Second LED connected to PINB4.
-- **BUTTONPIN (PINB5):** Button input connected to PINB5.
+- **LEDPIN1 (PINB1):** First LED connected to PINB1.
+- **LEDPIN2 (PINB0):** Second LED connected to PINB0.
+- **BUTTONPIN (PINB2):** Button input connected to PINB2.
+
+### Diagram 
+![Diagram](images/external-and-pin-change-interrupt-768x491.png)
 
 ## Libraries
 
