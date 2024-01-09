@@ -1,6 +1,8 @@
 # Atmel studio files
 .vs
-Debug
+
+#Debug files
+Debug/
 
 # Prerequisites
 *.d
