@@ -1,0 +1,348 @@
+
+Blik.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000074  00000000  00000000  000000d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00000074  000001a4  2**0
+                  ALLOC
+  2 .comment      0000005b  00000000  00000000  00000226  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000002a  00000000  00000000  00000281  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000038  00000000  00000000  000002ab  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000007fd  00000000  00000000  000002e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000051b  00000000  00000000  00000ae0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002a1  00000000  00000000  00000ffb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000074  00000000  00000000  0000129c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000169  00000000  00000000  00001310  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000126  00000000  00000000  00001479  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000040  00000000  00000000  0000159f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000002  00000148  00000148  0000021c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000015e0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.__vector_5 0000001e  0000011c  0000011c  000001f0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.__vector_2 00000022  000000fa  000000fa  000001ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.init    0000002a  000000d0  000000d0  000001a4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.main    0000005c  00000074  00000074  00000148  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .bss.button_pressed 00000001  00800060  00800060  00000226  2**0
+                  ALLOC
+ 19 .text.__dummy_fini 00000002  0000014a  0000014a  0000021e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__dummy_funcs_on_exit 00000002  0000014c  0000014c  00000220  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__dummy_simulator_exit 00000002  0000014e  0000014e  00000222  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.exit    0000000e  0000013a  0000013a  0000020e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text._Exit   00000002  00000150  00000150  00000224  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	11 c0       	rjmp	.+34     	; 0x24 <__ctors_end>
+   2:	a2 c0       	rjmp	.+324    	; 0x148 <__bad_interrupt>
+   4:	7a c0       	rjmp	.+244    	; 0xfa <__vector_2>
+   6:	a0 c0       	rjmp	.+320    	; 0x148 <__bad_interrupt>
+   8:	9f c0       	rjmp	.+318    	; 0x148 <__bad_interrupt>
+   a:	88 c0       	rjmp	.+272    	; 0x11c <__vector_5>
+   c:	9d c0       	rjmp	.+314    	; 0x148 <__bad_interrupt>
+   e:	9c c0       	rjmp	.+312    	; 0x148 <__bad_interrupt>
+  10:	9b c0       	rjmp	.+310    	; 0x148 <__bad_interrupt>
+  12:	9a c0       	rjmp	.+308    	; 0x148 <__bad_interrupt>
+  14:	99 c0       	rjmp	.+306    	; 0x148 <__bad_interrupt>
+  16:	98 c0       	rjmp	.+304    	; 0x148 <__bad_interrupt>
+  18:	97 c0       	rjmp	.+302    	; 0x148 <__bad_interrupt>
+  1a:	96 c0       	rjmp	.+300    	; 0x148 <__bad_interrupt>
+  1c:	95 c0       	rjmp	.+298    	; 0x148 <__bad_interrupt>
+
+0000001e <.dinit>:
+  1e:	00 60       	ori	r16, 0x00	; 0
+  20:	00 61       	ori	r16, 0x10	; 16
+  22:	80 00       	.word	0x0080	; ????
+
+00000024 <__ctors_end>:
+  24:	11 24       	eor	r1, r1
+  26:	1f be       	out	0x3f, r1	; 63
+  28:	cf e5       	ldi	r28, 0x5F	; 95
+  2a:	d2 e0       	ldi	r29, 0x02	; 2
+  2c:	de bf       	out	0x3e, r29	; 62
+  2e:	cd bf       	out	0x3d, r28	; 61
+
+00000030 <__do_copy_data>:
+  30:	ee e1       	ldi	r30, 0x1E	; 30
+  32:	f0 e0       	ldi	r31, 0x00	; 0
+  34:	40 e0       	ldi	r20, 0x00	; 0
+  36:	17 c0       	rjmp	.+46     	; 0x66 <__do_clear_bss+0x8>
+  38:	b5 91       	lpm	r27, Z+
+  3a:	a5 91       	lpm	r26, Z+
+  3c:	35 91       	lpm	r19, Z+
+  3e:	25 91       	lpm	r18, Z+
+  40:	05 91       	lpm	r16, Z+
+  42:	07 fd       	sbrc	r16, 7
+  44:	0c c0       	rjmp	.+24     	; 0x5e <__do_clear_bss>
+  46:	95 91       	lpm	r25, Z+
+  48:	85 91       	lpm	r24, Z+
+  4a:	ef 01       	movw	r28, r30
+  4c:	f9 2f       	mov	r31, r25
+  4e:	e8 2f       	mov	r30, r24
+  50:	05 90       	lpm	r0, Z+
+  52:	0d 92       	st	X+, r0
+  54:	a2 17       	cp	r26, r18
+  56:	b3 07       	cpc	r27, r19
+  58:	d9 f7       	brne	.-10     	; 0x50 <__SREG__+0x11>
+  5a:	fe 01       	movw	r30, r28
+  5c:	04 c0       	rjmp	.+8      	; 0x66 <__do_clear_bss+0x8>
+
+0000005e <__do_clear_bss>:
+  5e:	1d 92       	st	X+, r1
+  60:	a2 17       	cp	r26, r18
+  62:	b3 07       	cpc	r27, r19
+  64:	e1 f7       	brne	.-8      	; 0x5e <__do_clear_bss>
+  66:	e3 32       	cpi	r30, 0x23	; 35
+  68:	f4 07       	cpc	r31, r20
+  6a:	31 f7       	brne	.-52     	; 0x38 <__do_copy_data+0x8>
+  6c:	03 d0       	rcall	.+6      	; 0x74 <_etext>
+  6e:	65 c0       	rjmp	.+202    	; 0x13a <exit>
+
+00000070 <_exit>:
+  70:	f8 94       	cli
+
+00000072 <__stop_program>:
+  72:	ff cf       	rjmp	.-2      	; 0x72 <__stop_program>
+
+Disassembly of section .text:
+
+00000148 <__bad_interrupt>:
+ 148:	5b cf       	rjmp	.-330    	; 0x0 <__vectors>
+
+Disassembly of section .text.__vector_5:
+
+0000011c <__vector_5>:
+#define LEDPIN2 PINB4
+#define BUTTONPIN PINB5
+
+bool button_pressed = false;
+
+ISR(TIM0_OVF_vect) {
+ 11c:	1f 92       	push	r1
+ 11e:	0f 92       	push	r0
+ 120:	0f b6       	in	r0, 0x3f	; 63
+ 122:	0f 92       	push	r0
+ 124:	11 24       	eor	r1, r1
+ 126:	8f 93       	push	r24
+	// Toggle buton pressed boolean
+	button_pressed = true;
+ 128:	81 e0       	ldi	r24, 0x01	; 1
+ 12a:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+}
+ 12e:	8f 91       	pop	r24
+ 130:	0f 90       	pop	r0
+ 132:	0f be       	out	0x3f, r0	; 63
+ 134:	0f 90       	pop	r0
+ 136:	1f 90       	pop	r1
+ 138:	18 95       	reti
+
+Disassembly of section .text.__vector_2:
+
+000000fa <__vector_2>:
+
+ISR(PCINT0_vect) {
+  fa:	1f 92       	push	r1
+  fc:	0f 92       	push	r0
+  fe:	0f b6       	in	r0, 0x3f	; 63
+ 100:	0f 92       	push	r0
+ 102:	11 24       	eor	r1, r1
+ 104:	8f 93       	push	r24
+	if (PINB & _BV(BUTTONPIN))
+ 106:	b5 9b       	sbis	0x16, 5	; 22
+ 108:	03 c0       	rjmp	.+6      	; 0x110 <__vector_2+0x16>
+	// Toggle buton pressed boolean
+	button_pressed = true;
+ 10a:	81 e0       	ldi	r24, 0x01	; 1
+ 10c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+}
+ 110:	8f 91       	pop	r24
+ 112:	0f 90       	pop	r0
+ 114:	0f be       	out	0x3f, r0	; 63
+ 116:	0f 90       	pop	r0
+ 118:	1f 90       	pop	r1
+ 11a:	18 95       	reti
+
+Disassembly of section .text.init:
+
+000000d0 <init>:
+
+void init (){
+	// Set B ports as outputs
+	DDRB = _BV(LEDPIN1);
+  d0:	88 e0       	ldi	r24, 0x08	; 8
+  d2:	87 bb       	out	0x17, r24	; 23
+	DDRB = _BV(LEDPIN2);
+  d4:	80 e1       	ldi	r24, 0x10	; 16
+  d6:	87 bb       	out	0x17, r24	; 23
+	
+	// Prescale timer to 1/1024th the clock rate
+	TCCR0B |= _BV(CS02) | _BV(CS00);
+  d8:	83 b7       	in	r24, 0x33	; 51
+  da:	85 60       	ori	r24, 0x05	; 5
+  dc:	83 bf       	out	0x33, r24	; 51
+
+	// Enable timer overflow interrupt
+	//TIMSK |=_BV(TOIE0);
+	
+	PCMSK |= _BV(BUTTONPIN);   // Set pin change interrupt mask to listen to port b3
+  de:	85 b3       	in	r24, 0x15	; 21
+  e0:	80 62       	ori	r24, 0x20	; 32
+  e2:	85 bb       	out	0x15, r24	; 21
+	
+	MCUCR = _BV(ISC01) | _BV(ISC00);    // Set interrupt on INT0 pin falling edge (high pulled to low)
+  e4:	83 e0       	ldi	r24, 0x03	; 3
+  e6:	85 bf       	out	0x35, r24	; 53
+	
+	//Set sleep mode to power down
+	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+  e8:	85 b7       	in	r24, 0x35	; 53
+  ea:	87 7e       	andi	r24, 0xE7	; 231
+  ec:	80 61       	ori	r24, 0x10	; 16
+  ee:	85 bf       	out	0x35, r24	; 53
+	
+	// Enable interrupts
+	GIMSK |= _BV(PCIE);     // Enable PCINT interrupt
+  f0:	8b b7       	in	r24, 0x3b	; 59
+  f2:	80 62       	ori	r24, 0x20	; 32
+  f4:	8b bf       	out	0x3b, r24	; 59
+	sei();
+  f6:	78 94       	sei
+  f8:	08 95       	ret
+
+Disassembly of section .text.main:
+
+00000074 <main>:
+	
+}
+
+int main(void) {
+	//Initialize
+	init();
+  74:	2d d0       	rcall	.+90     	; 0xd0 <init>
+
+	for (;;) {
+		
+		if (button_pressed)
+  76:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
+  7a:	81 11       	cpse	r24, r1
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <main+0x42>
+  7e:	20 c0       	rjmp	.+64     	; 0xc0 <main+0x4c>
+		{
+			for (uint8_t i = 0; i < 3; i++)
+			{
+				PORTB ^= _BV(LEDPIN1);
+  80:	98 b3       	in	r25, 0x18	; 24
+  82:	88 e0       	ldi	r24, 0x08	; 8
+  84:	98 27       	eor	r25, r24
+  86:	98 bb       	out	0x18, r25	; 24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  88:	3f e3       	ldi	r19, 0x3F	; 63
+  8a:	4d e0       	ldi	r20, 0x0D	; 13
+  8c:	93 e0       	ldi	r25, 0x03	; 3
+  8e:	31 50       	subi	r19, 0x01	; 1
+  90:	40 40       	sbci	r20, 0x00	; 0
+  92:	90 40       	sbci	r25, 0x00	; 0
+  94:	e1 f7       	brne	.-8      	; 0x8e <main+0x1a>
+  96:	00 c0       	rjmp	.+0      	; 0x98 <main+0x24>
+  98:	00 00       	nop
+				_delay_ms(1000UL);
+				PORTB ^= _BV(LEDPIN1);
+  9a:	98 b3       	in	r25, 0x18	; 24
+  9c:	89 27       	eor	r24, r25
+  9e:	88 bb       	out	0x18, r24	; 24
+  a0:	3f e7       	ldi	r19, 0x7F	; 127
+  a2:	4a e1       	ldi	r20, 0x1A	; 26
+  a4:	86 e0       	ldi	r24, 0x06	; 6
+  a6:	31 50       	subi	r19, 0x01	; 1
+  a8:	40 40       	sbci	r20, 0x00	; 0
+  aa:	80 40       	sbci	r24, 0x00	; 0
+  ac:	e1 f7       	brne	.-8      	; 0xa6 <main+0x32>
+  ae:	00 c0       	rjmp	.+0      	; 0xb0 <main+0x3c>
+  b0:	00 00       	nop
+
+	for (;;) {
+		
+		if (button_pressed)
+		{
+			for (uint8_t i = 0; i < 3; i++)
+  b2:	2f 5f       	subi	r18, 0xFF	; 255
+  b4:	01 c0       	rjmp	.+2      	; 0xb8 <main+0x44>
+  b6:	20 e0       	ldi	r18, 0x00	; 0
+  b8:	23 30       	cpi	r18, 0x03	; 3
+  ba:	10 f3       	brcs	.-60     	; 0x80 <main+0xc>
+				PORTB ^= _BV(LEDPIN1);
+				_delay_ms(1000UL);
+				PORTB ^= _BV(LEDPIN1);
+				_delay_ms(2000UL);
+			}
+			button_pressed = false;
+  bc:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <_edata>
+		}
+		sleep_mode();
+  c0:	85 b7       	in	r24, 0x35	; 53
+  c2:	80 62       	ori	r24, 0x20	; 32
+  c4:	85 bf       	out	0x35, r24	; 53
+  c6:	88 95       	sleep
+  c8:	85 b7       	in	r24, 0x35	; 53
+  ca:	8f 7d       	andi	r24, 0xDF	; 223
+  cc:	85 bf       	out	0x35, r24	; 53
+	}
+  ce:	d3 cf       	rjmp	.-90     	; 0x76 <main+0x2>
+
+Disassembly of section .text.__dummy_fini:
+
+0000014a <_fini>:
+ 14a:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000014c <__funcs_on_exit>:
+ 14c:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000014e <__simulator_exit>:
+ 14e:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+0000013a <exit>:
+ 13a:	ec 01       	movw	r28, r24
+ 13c:	07 d0       	rcall	.+14     	; 0x14c <__funcs_on_exit>
+ 13e:	05 d0       	rcall	.+10     	; 0x14a <_fini>
+ 140:	ce 01       	movw	r24, r28
+ 142:	05 d0       	rcall	.+10     	; 0x14e <__simulator_exit>
+ 144:	ce 01       	movw	r24, r28
+ 146:	04 d0       	rcall	.+8      	; 0x150 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000150 <_Exit>:
+ 150:	8f df       	rcall	.-226    	; 0x70 <_exit>

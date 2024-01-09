@@ -35,9 +35,6 @@ void init (){
 	DDRB = _BV(LEDPIN1);
 	DDRB = _BV(LEDPIN2);
 	
-	
-	CKSEL =
-	
 	// Prescale timer to 1/1024th the clock rate
 	TCCR0B |= _BV(CS02) | _BV(CS00);
 
