@@ -62,12 +62,14 @@ int main(void) {
 		
 		if (button_pressed)
 		{
-			for (uint8_t i = 0; i < 3; i++)
+			
+			for (uint8_t i = 0; i < 30; i++)
 			{
+				PORTB ^= _BV(LEDPIN1);
+				_delay_ms(500UL);
 				PORTB ^= _BV(LEDPIN1) | _BV(LEDPIN2);
-				_delay_ms(1000UL);
-				PORTB ^= _BV(LEDPIN1) | _BV(LEDPIN2);
-				_delay_ms(2000UL);
+				_delay_ms(500UL);
+				PORTB ^= _BV(LEDPIN2);
 			}
 			button_pressed = false;
 		}
